@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+:root {
+    --background: rgb(16, 16, 20);
+    --l-1: rgb(24, 24, 28);
+    --primary: hsl(195, 82%, 31%);
+    --primary-light: hsl(195, 72%, 41%);
+    --primary-transparent: hsla(195, 72%, 41%, .2);
+    --highlight: hsla(195, 0%, 70%, .2);
+    --round: 3px;
+    --font: rgba(255, 255, 255, .87)
+}
+
+body {
+    margin: 0;
+    padding: 2em;
+    text-align: center;
+    font-family: 'Lora', serif;
+    color: var(--font);
+    background-color: var(--background);
+}
+
+#flex {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    border: 1px solid var(--highlight);
+    font-size: 1.5em;
+    max-width: 100px;
+    padding: .3em .7em;
+    color: var(--font);
+    background-color: var(--l-1);
+}
+
+input:focus {
+    outline: 0;
+}
+
+button {
+    border: 1px solid var(--highlight);
+    font-size: 1.3em;
+    background-color: var(--primary);
+    cursor: pointer;
+    color: var(--font);
+    padding: .3em;
+}
+
+button:hover {
+    background-color: var(--primary-light);
+}
+
+#submit {
+    border-top-right-radius: var(--round);
+    border-bottom-right-radius: var(--round);
+}
+
+#squirt {
+    border-top-left-radius: var(--round);
+    border-bottom-left-radius: var(--round);
+    border-right: 0;
+}
+
+#reset {
+    margin-top: 1em;
+    border-radius: var(--round);
+}
+
+.hidden,
+#flex.hidden {
+    display: none;
+}
+
+h3 {
+    margin: 4em 0 1em 0;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 25px auto;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+thead tr {
+    background-color: var(--primary);
+    color: var(--font);
+    text-align: left;
+}
+
+th,
+td {
+    padding: 12px 15px;
+}
+
+tbody tr {
+    border: 0;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: var(--primary-transparent);
+}
