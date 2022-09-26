@@ -57,7 +57,7 @@ function reset() {
     UI.status.innerText = 'Estimate the Squirtroot!'
     UI.fields.classList.remove('hidden')
     UI.reset.classList.add('hidden')
-    UI.submit.focus()
+    UI.input.focus()
 }
 
 function submit() {
