@@ -57,6 +57,7 @@ function reset() {
     UI.status.innerText = 'Estimate the Squirtroot!'
     UI.fields.classList.remove('hidden')
     UI.reset.classList.add('hidden')
+    UI.submit.focus()
 }
 
 function submit() {
@@ -94,11 +95,7 @@ function submit() {
 
     UI.reset.classList.remove('hidden')
     UI.fields.classList.add('hidden')
-}
-
-function forceGuessLength() {
-    if (UI.input.value.length > UI.input.maxLength)
-        UI.input.value = UI.input.value.slice(0, UI.input.maxLength)
+    UI.reset.focus()
 }
 
 UI.submit.addEventListener('click', submit)
@@ -108,7 +105,6 @@ UI.input.addEventListener('keypress', e => {
         submit()
     }
 })
-UI.input.addEventListener('input', forceGuessLength)
 UI.reset.addEventListener('click', reset)
 
 updateScores()
